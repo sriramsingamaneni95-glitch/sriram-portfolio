@@ -36,8 +36,8 @@ function Hero() {
           </a>
 
           <a
-            href="/Sriram-Singamaneni-Resume.pdf"
-            download="Sriram-Singamaneni-Resume.pdf"
+            href="/Sriram-Singamaneni.pdf"
+            download="Sriram-Singamaneni.pdf"
             className="hero-secondary"
           >
             DOWNLOAD RESUME ↓
