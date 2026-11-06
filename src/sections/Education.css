@@ -1,0 +1,153 @@
+
+.education-section {
+  padding: 110px 7%;
+  background: #101010;
+  border-top: 1px solid #252525;
+  overflow: hidden;
+}
+
+.education-heading h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(65px, 8vw, 110px);
+  line-height: 0.95;
+  margin: 25px 0 0;
+  letter-spacing: -1px;
+}
+
+.education-heading h2 span {
+  color: #e32b3c;
+}
+
+.education-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(35px, 6vw, 75px);
+  margin-top: 65px;
+  align-items: start;
+}
+
+.education-subtitle {
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.education-card {
+  position: relative;
+  padding: 27px 20px;
+  border-top: 1px solid #383838;
+  border-left: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  background: rgba(227, 43, 60, 0.04);
+  border-left-color: #e32b3c;
+  padding-left: 27px;
+}
+
+.education-year {
+  color: #e32b3c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.education-card h4 {
+  color: #fff;
+  font-size: 23px;
+  margin-top: 15px;
+}
+
+.education-card p {
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 8px;
+  line-height: 1.7;
+}
+
+.education-institution {
+  color: #777;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.education-score {
+  display: inline-block;
+  color: white;
+  background: #202020;
+  border: 1px solid #383838;
+  padding: 9px 13px;
+  font-size: 11px;
+  margin-top: 15px;
+  letter-spacing: 0.5px;
+}
+
+.certification-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 23px 15px;
+  border-top: 1px solid #383838;
+  transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+  background: rgba(227, 43, 60, 0.04);
+  padding-left: 23px;
+}
+
+.cert-number {
+  flex-shrink: 0;
+  color: #e32b3c;
+  font-family: 'Anton', sans-serif;
+  font-size: 27px;
+}
+
+.certification-card h4 {
+  color: #fff;
+  font-size: 15px;
+}
+
+.certification-card p {
+  color: #888;
+  font-size: 11px;
+  margin-top: 7px;
+}
+
+.cert-arrow {
+  margin-left: auto;
+  color: #e32b3c;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.certification-card:hover .cert-arrow {
+  transform: translate(4px, -4px);
+}
+
+@media (max-width: 850px) {
+  .education-section {
+    padding: 90px 6%;
+  }
+
+  .education-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-heading h2 {
+    font-size: clamp(55px, 12vw, 75px);
+  }
+
+  .education-card h4 {
+    font-size: 20px;
+  }
+
+  .certification-card {
+    gap: 13px;
+  }
+}

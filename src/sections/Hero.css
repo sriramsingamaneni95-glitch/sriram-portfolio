@@ -1,0 +1,275 @@
+
+.hero {
+  min-height: 100vh;
+  padding: 130px 7% 50px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  align-items: center;
+  gap: 55px;
+  position: relative;
+  overflow: hidden;
+  background: #090909;
+  color: #fff;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 700px;
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #ddd;
+  margin-bottom: 18px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e32b3c;
+  box-shadow: 0 0 12px #e32b3c;
+}
+
+.hero h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(65px, 7vw, 110px);
+  line-height: 0.98;
+  letter-spacing: -1px;
+  margin: 0;
+  overflow-wrap: normal;
+}
+
+.hero h1 > span:first-of-type {
+  color: #e32b3c;
+}
+
+.hero-period {
+  color: #e32b3c;
+}
+
+.hero-description {
+  max-width: 540px;
+  margin: 25px 0;
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.hero-primary,
+.hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 23px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.hero-primary {
+  background: #e32b3c;
+  color: #fff;
+  border: 1px solid #e32b3c;
+}
+
+.hero-primary:hover {
+  background: #fff;
+  color: #090909;
+  border-color: #fff;
+  transform: translateY(-3px);
+}
+
+.hero-secondary {
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.hero-secondary:hover {
+  border-color: #e32b3c;
+  color: #e32b3c;
+  transform: translateY(-3px);
+}
+
+.hero-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 35px;
+  margin-top: 55px;
+  color: #777;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.photo-visual {
+  width: 100%;
+  height: 540px;
+  min-width: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-glow {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: rgba(227, 43, 60, 0.12);
+  filter: blur(80px);
+}
+
+.portrait-frame {
+  width: min(100%, 390px);
+  height: 490px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 190px 190px 15px 15px;
+  border: 1px solid rgba(227, 43, 60, 0.5);
+  background: #fff;
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.photo-label {
+  position: absolute;
+  right: -10px;
+  bottom: 35px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 14px 18px;
+  background: #090909;
+  border-left: 2px solid #e32b3c;
+}
+
+.photo-label span {
+  color: #999;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.photo-label strong {
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    gap: 30px;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  }
+
+  .hero h1 {
+    font-size: clamp(58px, 7vw, 85px);
+  }
+
+  .photo-label {
+    right: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 120px 7% 60px;
+    gap: 35px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(58px, 12vw, 90px);
+  }
+
+  .hero-description {
+    max-width: 600px;
+  }
+
+  .photo-visual {
+    height: 450px;
+  }
+
+  .portrait-frame {
+    height: 400px;
+    width: 300px;
+  }
+
+  .photo-label {
+    right: calc(50% - 190px);
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 110px 6% 45px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 12vw, 65px);
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-primary,
+  .hero-secondary {
+    width: 100%;
+  }
+
+  .hero-bottom {
+    margin-top: 35px;
+    gap: 12px;
+  }
+
+  .photo-visual {
+    height: 400px;
+  }
+
+  .portrait-frame {
+    width: 270px;
+    height: 350px;
+  }
+
+  .photo-label {
+    right: 0;
+    bottom: 5px;
+  }
+}

@@ -1,0 +1,163 @@
+
+.about-section {
+  padding: 105px 7% 110px;
+  background: #101010;
+  border-top: 1px solid #252525;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-label {
+  display: inline-block;
+  color: #e32b3c;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.about-heading h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(65px, 8vw, 115px);
+  line-height: 0.95;
+  margin: 25px 0 0;
+  letter-spacing: -1px;
+}
+
+.about-heading h2 span {
+  color: #e32b3c;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(45px, 8vw, 110px);
+  margin-top: 65px;
+  align-items: start;
+}
+
+.about-intro {
+  max-width: 600px;
+}
+
+.about-small-label {
+  display: inline-block;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.about-intro p {
+  color: #999;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0 0 22px;
+}
+
+.about-intro strong {
+  color: white;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-detail {
+  padding: 23px 20px;
+  border-bottom: 1px solid #333;
+  border-left: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.about-detail:first-child {
+  padding-top: 0;
+}
+
+.about-detail:hover {
+  background: rgba(227, 43, 60, 0.045);
+  border-left-color: #e32b3c;
+  padding-left: 27px;
+}
+
+.about-detail span {
+  color: #e32b3c;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.about-detail h3 {
+  color: white;
+  font-size: 21px;
+  margin: 12px 0 8px;
+  font-weight: 700;
+}
+
+.about-detail p,
+.about-detail small {
+  display: block;
+  color: #888;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.about-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  padding-top: 25px;
+  border-top: 1px solid #333;
+  color: #777;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.about-footer span {
+  transition: color 0.3s ease;
+}
+
+.about-footer span:hover {
+  color: #e32b3c;
+}
+
+@media (max-width: 850px) {
+  .about-section {
+    padding: 90px 6%;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-top: 45px;
+  }
+
+  .about-intro {
+    max-width: 100%;
+  }
+
+  .about-detail:first-child {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-heading h2 {
+    font-size: clamp(52px, 12vw, 68px);
+  }
+
+  .about-intro p {
+    font-size: 14px;
+  }
+
+  .about-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
