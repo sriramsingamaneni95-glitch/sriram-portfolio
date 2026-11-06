@@ -1,6 +1,6 @@
 
 import './Hero.css';
-import sriramPhoto from '../assets/sriram.jpeg';
+import sriramPhoto from '../assets/Sriram.jpeg';
 
 function Hero() {
   return (
